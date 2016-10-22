@@ -7,8 +7,9 @@ block body
       img.detail(src=`${link}`)
       div#description
         h5 #{author} (posted by #{poster})
-        p #{description}
-        p #{hashtags}
+        div#info
+          p #{description}
+          p#tags #{hashtags}
       a(href=`/gallery/${id}/edit`)
         if user.auth !== false && (user.id == uid || user.id == 1)
           button Edit Post

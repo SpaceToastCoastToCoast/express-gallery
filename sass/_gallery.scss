@@ -1,17 +1,29 @@
-$light-color : #fdfdfd;
-$border-color: #a0a0a0;
-$header-desc-color: #909090;
-$text-color: #606060;
-
+$border-color: #008C9E;
 
 #buttons {
   margin: auto;
-  width: 90%;
+  margin-bottom: 8px;
+  width: 85%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   @include respond-to(medium) {
-    width: 85%;
+    width: 80%;
+    display: block;
   }
-  button {
+  a {
+    flex-shrink: 1;
+    width: 25%;
+    min-width: 80px;
     margin-right: 8px;
+    button {
+      margin-right: 8px;
+      width: 100%;
+      @include respond-to(medium) {
+        width: 80px;
+      }
+    }
   }
   h5 {
     margin: 0px;
@@ -38,19 +50,22 @@ $text-color: #606060;
 }
 
 .preview {
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 300px;
+  width: 100%;
+  @include respond-to(medium) {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 300px;
+  }
 }
 
 #featured {
   margin: auto;
   padding: 8px;
   border-bottom: 1px solid $border-color;
-  width: 90%;
+  width: 85%;
   @include respond-to(medium) {
-    width: 85%;
+    width: 80%;
   }
 }
 

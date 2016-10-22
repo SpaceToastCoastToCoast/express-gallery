@@ -1,13 +1,22 @@
-$light-color : #fdfdfd;
-$border-color: #a0a0a0;
-$header-desc-color: #909090;
-$text-color: #606060;
+$light-color: #00B4CC;
+$footer-color: rgba(0, 95, 107, 0.2);
 
 #photoTitle {
-  color: $header-desc-color;
+  color: $light-color;
   width: 85%;
   margin: auto;
   padding-bottom: 12px;
+  @include respond-to(medium) {
+    width: 80%;
+  }
+}
+
+#info {
+  padding: 8px;
+  background-color: $footer-color;
+  #tags {
+    font-size: 10px;
+  }
 }
 
 .relatedPhoto {

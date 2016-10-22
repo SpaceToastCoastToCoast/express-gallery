@@ -14,7 +14,5 @@ block body
       textarea(name='description' rows='16' cols='48' required) #{description}
       p Hashtags
       input(type='text' name='hashtags' value=hashtags)
-      input(type='submit' value='Submit')
-      a(href=`/gallery/${id}`)
-        button Go Back
+      <div id="editButtons"><input type='submit' value='Submit'><a href=`/gallery/${id}` id='backButton'><button>Go Back</button></a></div>
   script(type='text/javascript' src='/js/validate.js')
