@@ -8,9 +8,9 @@ let up = function(queryInterface, Sequelize) {
   let salt = bcrypt.genSaltSync(10);
   return queryInterface.bulkInsert('Users', [
     {
-      username: 'galleryuser',
-      password: bcrypt.hashSync('password', salt),
-      emailaddress: 'woof@doge.com',
+      username: 'galleryadmin',
+      password: bcrypt.hashSync(admin_password, salt),
+      emailaddress: 'admin@architekt.com',
       role: 'ADMIN',
       createdAt: new Date(),
       updatedAt: new Date()
