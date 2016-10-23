@@ -7,6 +7,8 @@ $footer-color: rgba(0, 95, 107, 0.25);
   width: 85%;
   margin: auto;
   padding-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 4px;
   @include respond-to(medium) {
     width: 80%;
   }
@@ -14,6 +16,7 @@ $footer-color: rgba(0, 95, 107, 0.25);
 
 #info {
   margin-top: 8px;
+  margin-bottom: 8px;
   padding: 8px;
   background-color: $footer-color;
   box-shadow: 0px 2px 1px #181C20;
@@ -24,6 +27,12 @@ $footer-color: rgba(0, 95, 107, 0.25);
     font-size: 10px;
     background-color: $dark-color;
   }
+}
+
+#controlButtons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .relatedPhoto {

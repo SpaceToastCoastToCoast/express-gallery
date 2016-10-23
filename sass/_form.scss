@@ -6,11 +6,11 @@ $invalid-color: #e08690;
 $login-bg-color: rgba(0, 95, 107, 0.2);
 
 #newPostForm, #editPostForm {
-  width: 90%;
+  width: 85%;
   margin: auto;
   padding-bottom: 64px;
   @include respond-to(medium) {
-    width: 85%;
+    width: 80%;
   }
   form {
     display: flex;
@@ -63,7 +63,7 @@ textarea, input[type=text] {
   align-items: center;
   justify-content: flex-start;
   @include respond-to(medium) {
-    width: 85%;
+    width: 80%;
     flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: flex-start;

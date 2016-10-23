@@ -10,12 +10,13 @@ block body
           p #{description}
           p (original source: #{author}, posted by: #{poster})
           p#tags #{hashtags}
-      a(href=`/gallery/${id}/edit`)
-        if user.auth !== false && (user.id == uid || user.id == 1)
-          button Edit Post
-      a(href=`/gallery/${id}/delete`)
-        if user.auth !== false && (user.id == uid || user.id == 1)
-          button Delete Post
+      div#controlButtons
+        a(href=`/gallery/${id}/edit`)
+          if user.auth !== false && (user.id == uid || user.id == 1)
+            button Edit Post
+        a(href=`/gallery/${id}/delete`)
+          if user.auth !== false && (user.id == uid || user.id == 1)
+            button Delete Post
     div#sidebar
       each rel in relatedPhotos
         div.relatedPhoto
