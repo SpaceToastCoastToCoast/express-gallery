@@ -1,4 +1,6 @@
 $border-color: #008C9E;
+$dark-color: #005F6B;
+$bg-color: rgba(0, 95, 107, 0.2);
 
 #buttons {
   margin: auto;
@@ -65,14 +67,16 @@ $border-color: #008C9E;
 
 #featured {
   margin: auto;
+  margin-bottom: 4px;
   padding: 8px;
-  border-bottom: 1px solid $border-color;
+  background-color: $bg-color;
   width: 85%;
+  box-shadow: 0px 2px 1px #181C20;
   @include respond-to(medium) {
     width: 80%;
   }
 }
 
 #featuredImage {
-  width: 100%
+  width: 100%;
 }

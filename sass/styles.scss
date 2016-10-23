@@ -25,6 +25,10 @@ button, input[type=submit] {
   color: $lightest-color;
 }
 
+img {
+  box-shadow: 0px 2px 1px #181C20;
+}
+
 body {
   a {
     text-decoration: none;
@@ -118,7 +122,7 @@ h3, h5 {
   flex: 0 1 auto;
   width: 35%;
   border-left: 1px solid $light-color;
-  text-shadow: 1px 2px 1px #181C20;
+  text-shadow: 1px 2px 4px #181C20;
   margin-left: 16px;
   padding-left: 16px;
   display: none;
