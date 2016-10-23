@@ -6,10 +6,10 @@ const log = require ('./middleware/log');
 const app = express();
 const authenticate = require('./middleware/authentication');
 const passport = require('passport');
-const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
+const flash = require('connect-flash');
 const gallery = require('./routes/gallery');
 const db = require('./models');
 const Photo = db.Photo;
@@ -19,7 +19,7 @@ app.use(express.static('./public'));
 app.set('view engine', 'pug');
 app.set('views', './views');
 app.use(bodyParser.urlencoded({ extended: true}));
-//app.use(flash());
+app.use(flash());
 app.use(session({
   store: new RedisStore(),
   secret: CONFIG.SECRET,
@@ -40,7 +40,10 @@ app.listen(3000, function() {
 });
 
 app.get('/login', (req, res) => {
-  res.render('login', {status: 'valid'});
+  res.render('login', {
+    status: 'valid',
+    failureMsg: req.flash('error')[0]
+  });
 });
 
 app.get('/logout', (req, res) => {
@@ -50,7 +53,8 @@ app.get('/logout', (req, res) => {
 
 app.post('/login', passport.authenticate('local', {
     successRedirect: '/gallery',
-    failureRedirect: '/login'
+    failureRedirect: '/login',
+    failureFlash: 'Invalid login'
 }));
 
 let isLoggedIn = (req) => {

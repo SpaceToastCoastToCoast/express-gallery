@@ -1,7 +1,8 @@
 extends ./layout
 
 block body
-  -var br = '<br />'
+  div#errorMsg
+    p #{failureMsg}
   div#login
     form(method="POST" action="/login")
       h5 Login existing user

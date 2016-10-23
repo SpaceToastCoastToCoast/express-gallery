@@ -5,6 +5,16 @@ $dark-color: #005F6B;
 $invalid-color: #e08690;
 $login-bg-color: rgba(0, 95, 107, 0.2);
 
+#errorMsg {
+  width: 85%;
+  margin: auto;
+  color: white;
+  text-shadow: 0px 0px 2px $invalid-color, 0px 0px 4px $invalid-color;
+  @include respond-to(medium) {
+    width: 80%;
+  }
+}
+
 #newPostForm, #editPostForm {
   width: 85%;
   margin: auto;

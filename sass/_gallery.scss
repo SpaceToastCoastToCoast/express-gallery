@@ -49,9 +49,18 @@ $bg-color: rgba(0, 95, 107, 0.2);
   }
 }
 .galleryPreview {
+  padding: 8px;
   width: 100%;
+  background-color: $bg-color;
+  box-shadow: 0px 2px 1px #181C20;
+  margin-bottom: 8px;
   @include respond-to(medium) {
-    width: 32%;
+    width: 30%;
+  }
+  h5 {
+    margin: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
