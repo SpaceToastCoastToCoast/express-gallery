@@ -5,20 +5,24 @@ $border-color: #008C9E;
   margin-bottom: 8px;
   width: 85%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-start;
   align-items: center;
   @include respond-to(medium) {
+    text-align: right;
     width: 80%;
-    display: block;
+    justify-content: flex-start;
   }
   a {
     flex-shrink: 1;
     width: 25%;
     min-width: 80px;
-    margin-right: 8px;
+    margin-left: 8px;
+    @include respond-to(medium) {
+      width: 88px;
+    }
+    text-align: right;
     button {
-      margin-right: 8px;
       width: 100%;
       @include respond-to(medium) {
         width: 80px;

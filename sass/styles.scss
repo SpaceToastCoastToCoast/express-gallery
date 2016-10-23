@@ -83,7 +83,7 @@ h3, h5 {
   a#homeLink {
     h1 {
       flex: 0 1 auto;
-      font-size: 56px;
+      font-size: 48px;
       text-align: center;
       font-weight: bold;
       color: $lightest-color;
@@ -103,6 +103,7 @@ h3, h5 {
   width: 35%;
   border-left: 1px solid $light-color;
   text-shadow: 1px 2px 1px #181C20;
+  margin-left: 16px;
   padding-left: 16px;
   display: none;
   @include respond-to(medium) {
@@ -138,6 +139,7 @@ h3, h5 {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 2px 1px #181C20;
   a {
     height: 100%;
     color: $medium-color;

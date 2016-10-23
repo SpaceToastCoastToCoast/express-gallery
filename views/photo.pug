@@ -6,9 +6,9 @@ block body
     div#photoDiv
       img.detail(src=`${link}`)
       div#description
-        h5 #{author} (posted by #{poster})
         div#info
           p #{description}
+          p (original source: #{author}, posted by: #{poster})
           p#tags #{hashtags}
       a(href=`/gallery/${id}/edit`)
         if user.auth !== false && (user.id == uid || user.id == 1)
@@ -21,4 +21,4 @@ block body
         div.relatedPhoto
           a(href=`/gallery/${rel.id}`)
             img.relatedPreview(src=`${rel.link}`)
-        h5 #{rel.title}
+          h5 #{rel.title}
