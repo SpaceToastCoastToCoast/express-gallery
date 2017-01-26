@@ -56,7 +56,7 @@ module.exports = {
   down: function (queryInterface, Sequelize) {
     return queryInterface.bulkDelete('Photos',
       {
-        author: ['Such Doge', 'Doge', 'Snoop Dogey Doge', 'Shrek Doge', 'Fake Burger Guy']
+        author: ['Archdaily']
       }, {});
   }
 };

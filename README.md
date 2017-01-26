@@ -3,6 +3,8 @@ Express Gallery
 
 Express, Sequelize, HTML5, stored on PostgreSQL
 
+![](https://github.com/SpaceToastCoastToCoast/express-gallery/blob/dark-theme/screenshot.png)
+
 ---
 
 Create a multi-user Gallery.
@@ -28,20 +30,16 @@ Any user should be able to access these routes:
 
 ---
 
-The layout of the app matches the layouts included in `/layouts`.
-
----
-
 #### Responsive Layout
 
 - does not have tablet layout
-- uses a background image that is not included, you will have to find something similar (subtlepatterns.com)
+- uses a background image
 
 ---
 
 #### Setting up the project
 
-- Create a database for the project in postgres.
+- Create a database for the project in postgres. (`express_gallery`)
 - Run `npm start`
 - Run `sequelize db:seed:all`
 - Run `gulp`

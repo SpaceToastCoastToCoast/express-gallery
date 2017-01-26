@@ -1,30 +1,50 @@
 $light-color: #00B4CC;
-$footer-color: rgba(0, 95, 107, 0.2);
+$dark-color: #005F6B;
+$footer-color: rgba(0, 95, 107, 0.25);
 
 #photoTitle {
   color: $light-color;
   width: 85%;
   margin: auto;
   padding-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 4px;
   @include respond-to(medium) {
     width: 80%;
   }
 }
 
 #info {
+  margin-top: 8px;
+  margin-bottom: 8px;
   padding: 8px;
   background-color: $footer-color;
+  box-shadow: 0px 2px 1px #181C20;
   #tags {
+    margin: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     font-size: 10px;
+    background-color: $dark-color;
   }
 }
 
+#controlButtons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .relatedPhoto {
+  padding: 8px;
   text-align: right;
+  margin-bottom: 8px;
+  background-color: $footer-color;
+  box-shadow: 0px 2px 1px #181C20;
   h5 {
     text-align: left;
     margin-top: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 }
 .relatedPreview {
@@ -56,6 +76,6 @@ $footer-color: rgba(0, 95, 107, 0.2);
   display: none;
   @include respond-to(medium) {
     display: inline-block;
-    width: 250px;
+    width: 266px;
   }
 }

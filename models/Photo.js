@@ -30,6 +30,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     link: {
       type: DataTypes.TEXT,
+      unique: true,
       validate: {
         isUrl: true
       }

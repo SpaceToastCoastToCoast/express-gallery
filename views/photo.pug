@@ -6,19 +6,20 @@ block body
     div#photoDiv
       img.detail(src=`${link}`)
       div#description
-        h5 #{author} (posted by #{poster})
         div#info
           p #{description}
+          p (original source: #{author}, posted by: #{poster})
           p#tags #{hashtags}
-      a(href=`/gallery/${id}/edit`)
-        if user.auth !== false && (user.id == uid || user.id == 1)
-          button Edit Post
-      a(href=`/gallery/${id}/delete`)
-        if user.auth !== false && (user.id == uid || user.id == 1)
-          button Delete Post
+      div#controlButtons
+        a(href=`/gallery/${id}/edit`)
+          if user.auth !== false && (user.id == uid || user.id == 1)
+            button Edit Post
+        a(href=`/gallery/${id}/delete`)
+          if user.auth !== false && (user.id == uid || user.id == 1)
+            button Delete Post
     div#sidebar
       each rel in relatedPhotos
         div.relatedPhoto
           a(href=`/gallery/${rel.id}`)
             img.relatedPreview(src=`${rel.link}`)
-        h5 #{rel.title}
+          h5 #{rel.title}

@@ -1,24 +1,30 @@
 $border-color: #008C9E;
+$dark-color: #005F6B;
+$bg-color: rgba(0, 95, 107, 0.2);
 
 #buttons {
   margin: auto;
   margin-bottom: 8px;
   width: 85%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-start;
   align-items: center;
   @include respond-to(medium) {
+    text-align: right;
     width: 80%;
-    display: block;
+    justify-content: flex-start;
   }
   a {
     flex-shrink: 1;
     width: 25%;
     min-width: 80px;
-    margin-right: 8px;
+    margin-left: 8px;
+    @include respond-to(medium) {
+      width: 88px;
+    }
+    text-align: right;
     button {
-      margin-right: 8px;
       width: 100%;
       @include respond-to(medium) {
         width: 80px;
@@ -43,9 +49,18 @@ $border-color: #008C9E;
   }
 }
 .galleryPreview {
+  padding: 8px;
   width: 100%;
+  background-color: $bg-color;
+  box-shadow: 0px 2px 1px #181C20;
+  margin-bottom: 8px;
   @include respond-to(medium) {
-    width: 32%;
+    width: 30%;
+  }
+  h5 {
+    margin: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -61,14 +76,16 @@ $border-color: #008C9E;
 
 #featured {
   margin: auto;
+  margin-bottom: 4px;
   padding: 8px;
-  border-bottom: 1px solid $border-color;
+  background-color: $bg-color;
   width: 85%;
+  box-shadow: 0px 2px 1px #181C20;
   @include respond-to(medium) {
     width: 80%;
   }
 }
 
 #featuredImage {
-  width: 100%
+  width: 100%;
 }

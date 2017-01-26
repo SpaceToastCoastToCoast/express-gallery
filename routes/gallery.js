@@ -91,6 +91,9 @@ router.route('/')
       UserId: req.user.id })
     .then((photos) => {
       renderById(req, res, photos.id);
+    })
+    .catch((err) => {
+      res.sendStatus(500);
     });
   });
 

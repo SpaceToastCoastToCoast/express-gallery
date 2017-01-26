@@ -9,7 +9,7 @@ let up = function(queryInterface, Sequelize) {
   return queryInterface.bulkInsert('Users', [
     {
       username: 'galleryadmin',
-      password: bcrypt.hashSync('password', salt),
+      password: bcrypt.hashSync(admin_password, salt),
       emailaddress: 'admin@architekt.com',
       role: 'ADMIN',
       createdAt: new Date(),
@@ -22,7 +22,7 @@ let up = function(queryInterface, Sequelize) {
 let down = function (queryInterface, Sequelize) {
   return queryInterface.bulkDelete('Users',
     {
-      username: ['galleryuser']
+      username: ['galleryuser', 'galleryadmin']
     }, {});
 };
 
