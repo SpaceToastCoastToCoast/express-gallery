@@ -3,6 +3,8 @@ Express Gallery
 
 Express, Sequelize, HTML5, stored on PostgreSQL
 
+![](https://github.com/SpaceToastCoastToCoast/express-gallery/blob/dark-theme/screenshot.png)
+
 ---
 
 Create a multi-user Gallery.
